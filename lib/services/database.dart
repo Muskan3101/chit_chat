@@ -50,7 +50,7 @@ class DatabaseMethods {
         .orderBy("time",descending: false)
         .snapshots();
   }
-  getChatRooms(String userName) async {
+  getChatRooms(String userName) async{
     return await FirebaseFirestore.instance.collection("ChatRoom").where("users",arrayContains: userName).snapshots();
   }
 }

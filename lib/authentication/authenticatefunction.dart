@@ -24,15 +24,15 @@ class AuthenticateFunction {
 
   //getting data from Shared Preference
 
-static Future<bool?> getUserLoggedInSharedPreference(bool isUserLoggedIn)async {
+static Future<bool?> getUserLoggedInSharedPreference()async {
     SharedPreferences preferences = await SharedPreferences.getInstance();
     return  preferences.getBool(sharedPreferenceUserLoggedInKey);
 }
-  static Future<String?> getUserNameSharedPreference(String userName) async {
+  static Future<String?> getUserNameSharedPreference() async {
     SharedPreferences preferences = await SharedPreferences.getInstance();
     return preferences.getString(sharedPreferenceUserNameKey);
   }
-  static Future<String?> getUserEmailSharedPreference(String userEmail) async {
+  static Future<String?> getUserEmailSharedPreference() async {
     SharedPreferences preferences = await SharedPreferences.getInstance();
     return preferences.getString(sharedPreferenceUserEmailKey);
   }

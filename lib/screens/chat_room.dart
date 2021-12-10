@@ -38,7 +38,7 @@ class _ChatRoomState extends State<ChatRoom> {
   }
 
   getUserInfo()async{
-    Constants.myName = (await AuthenticateFunction.getUserNameSharedPreference(AuthenticateFunction.sharedPreferenceUserNameKey))!;
+    Constants.myName = (await AuthenticateFunction.getUserNameSharedPreference())!;
     databaseMethods.getChatRooms(Constants.myName).then((value){
       setState(() {
         chatRoomStream = value;

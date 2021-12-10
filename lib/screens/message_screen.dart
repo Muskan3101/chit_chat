@@ -21,7 +21,7 @@ class _MessageScreenState extends State<MessageScreen> {
       stream: chatMessageStream,
         builder: (context,AsyncSnapshot snapshot){
         return snapshot.hasData ? ListView.builder(
-          itemCount: snapshot.data.docs.length.compareTo(0),
+          itemCount: snapshot.data.docs.length,
           itemBuilder: (context,index){
             return MessageTile(snapshot.data.docs[index].data["message"],
             snapshot.data.docs[index].data["sendBy"] == Constants.myName
